@@ -5,7 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.min.css' %}">
+    {% if debug|default_if_none:False %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% else %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.min.css' %}">
+    {% endif %}
     <title>{% block title %}{% endblock %} | ecommerceWebsite</title>
 </head>
 <body class="bg-slate-50 flex items-center justify-center min-h-screen">
