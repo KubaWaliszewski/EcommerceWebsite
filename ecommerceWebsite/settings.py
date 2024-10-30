@@ -25,7 +25,7 @@ ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 INTERNAL_IPS = env.list('INTERNAL_IPS')
 
-CSRF_TRUSTED_ORIGINS = ['https://ecommercewebsite-zcj7.onrender.com','*']
+CSRF_TRUSTED_ORIGINS = ['https://ecommercewebsite-zcj7.onrender.com']
 
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
