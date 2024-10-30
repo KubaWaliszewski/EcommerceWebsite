@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if debug %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% else %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.min.css' %}">
+    {% endif %}
+    <title>{% block title %}{% endblock %} | ecommerceWebsite</title>
+
+</head>
+<body class="bg-slate-50">
+
+    {% include 'admin_panel/core/navbar.html' %}
+
+    <main class="p-6">
+        {% if messages %}
+            <div class="message mb-6 p-6 bg-sky-500 text-white rounded-xl">
+                {% for message in messages %}
+                    <div class="flex justify-between items-center mb-2">
+                        <p>{{ message }}</p>
+                        <a href="?dismiss={{ message }}" class="text-white font-bold">X</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="container mx-auto px-4 py-6">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+
+
+
+    {% block scripts %}
+    {% endblock %}
+
+</body>
+</html>

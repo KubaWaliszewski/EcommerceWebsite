@@ -1,0 +1,31 @@
+# Environment variables
+venv/
+.env
+
+# Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Django
+db.sqlite3
+*/migrations/
+
+# Static and media files
+/static/
+/media/
+
+# Logs
+*.log
+
+# Node and Tailwind
+node/
+
+# Compiled and cache files
+build/
+dist/
+.cache/
+.webpack-cache/
+
+# MacOS
+.DS_Store

@@ -1,0 +1,125 @@
+{% extends 'admin_panel/core/base.html' %}
+{% load static %}
+{% load tailwind_filters %}
+{% block title %}Admin-Panel{% endblock %}
+
+{% block content %}
+<div class="container mx-auto p-4 flex">
+    <div class="w-1/3">
+        <div class="shadow-md bg-white rounded-md p-6 mr-6 ">
+            <h1 class="mb-4 text-2xl font-semibold">Address</h1>
+            <hr class="mb-4">
+            <p>Full Name: <strong>{{ order.full_name }}</strong></p>
+            <p>Phone: <strong>{{ order.phone }}</strong></p>
+            <p>Address: <strong>{{ order.address }}</strong></p>
+            <p>Address2: <strong>{{ order.address2 }}</strong></p>
+            <p>City: <strong>{{ order.city }}</strong></p>
+            <p>Zip Code: <strong>{{ order.zip_code }}</strong></p>
+            <p>Country: <strong>{{ order.country }}</strong></p>
+
+        </div>
+    </div>
+    <div class="w-2/3"> 
+        <div class="shadow-md bg-white rounded-md p-6 mr-6">
+            <h1 class="mb-4 text-2xl font-semibold">Information:</h1>
+            <hr class="mb-4">
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white ">
+                    <thead>
+                        <tr class="w-full text-left">
+                            <th class="py-2 px-4">Order ID</th>
+                            <th class="py-2 px-4">Created At</th>
+                            <th class="py-2 px-4">Is Paid</th>
+                            <th class="py-2 px-4">User Email</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                        <tr>
+                            <td class="py-2 px-4">{{ order.id }}</td>
+                            <td class="py-2 px-4">{{ order.created_at }}</td>
+                            <td class="py-2 px-4">
+                                    {% if order.is_paid %}
+                                        <span class="text-green-500 font-semibold">Yes</span>
+                                    {% else %}
+                                        <span class="text-red-500 font-semibold">No</span>
+                                    {% endif %}
+                            </td>
+                            <td class="py-2 px-4 p-4 hover:bg-blue-400 hover:text-white rounded-md"><a href="{% url 'admin_panel:user_view' order.user.id %}">{{ order.email }}</a></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="container mx-auto p-4 flex">
+    <div class="w-1/3">
+        <div class="shadow-md bg-white rounded-md p-6 mr-6 ">
+            <h1 class="mb-4 text-2xl font-semibold">Status</h1>
+            <hr class="mb-4">
+            <form method="post">
+                {% csrf_token %}
+                <select name="status" class="border border-gray-300 rounded-md py-2 px-4 mb-4 w-full">
+                    {% for value, label in order.STATUS %}
+                        <option value="{{ value }}" {% if order.status == value %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit" class="py-2 px-4 bg-blue-600 hover:bg-blue-800 text-white rounded-md">Save</button>
+            </form>
+
+        </div>
+    </div>
+    <div class="w-2/3"> 
+        <div class="shadow-md bg-white rounded-md p-6 mr-6">
+            <h1 class="mb-4 text-2xl font-semibold">Order Items:</h1>
+            <hr class="mb-4">
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white ">
+                    <thead>
+                        <tr class="w-full text-left">
+                            <th class="py-2 px-4">Product Name</th>
+                            <th class="py-2 px-4">Quantity</th>
+                            <th class="py-2 px-4">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in order.items.all %}
+                            <tr class="text-sm {% cycle 'bg-gray-100' '' %}">
+                                <td class="py-2 px-4"><a href="{% url 'shop:product_detail' category_slug=item.product.category.slug slug=item.product.slug %}">{{ item.product.name }}</a></td>
+                                <td class="py-2 px-4">{{ item.quantity }}</td>
+                                <td class="py-2 px-4">${{ item.price }}</td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="3" class="py-2 px-4 text-center text-gray-600">No items in this order.</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                    <tr>
+                        <td colspan="3" class="py-2 px-4 text-right text-right">
+                            Total: <strong>${{ order.get_total_cost }}</strong>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mx-auto p-4 flex">
+    <div class="w-1/3">
+        <div class="shadow-md bg-white rounded-md p-6 mr-6 ">
+            <h1 class="mb-4 text-2xl ">User role: <strong>{{ order.user.role }}</strong></h1>
+        </div>
+    </div>
+</div>
+
+
+
+   
+
+</div>
+{% endblock %}
+
+

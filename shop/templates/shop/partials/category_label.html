@@ -1,0 +1,20 @@
+<aside class="w-1/4 p-6 bg-gray-200 shadow-lg rounded-lg text-lg font-semibold mr-6">
+    <a href="{% url 'shop:product_list' %}">
+        <h1 class="text-3xl text-gray-900 mb-4">Categories</h1>
+    </a>
+    <ul class="space-y-2">
+        {% for category in categories %}
+            <li>
+                <a href="{% url 'shop:product_list_by_category' category.slug %}"
+                   class="block py-2 px-4 rounded-lg transition duration-300
+                   {% if category.slug == request.resolver_match.kwargs.category_slug %}
+                       bg-gray-400 text-gray-900 shadow-md
+                   {% else %}
+                       text-gray-800 hover:bg-gray-400 hover:text-white
+                   {% endif %}">
+                    {{ category.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</aside>

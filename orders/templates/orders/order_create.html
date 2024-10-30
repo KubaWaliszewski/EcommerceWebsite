@@ -1,0 +1,81 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Order Create{% endblock %}
+
+{% block content %}
+<div class="shadow-md rounded-lg p-4">
+    <h2 class="text-2xl font-semibold mb-4">Checkout</h2>
+
+    <form method="post" class="mx-auto flex justify-between">
+        {% csrf_token %}
+
+      
+        <div class="w-1/4">
+            <h3 class="text-xl font-semibold mb-4 mr-4">Shipping Address</h3>
+            {{ OrderCreateForm.full_name.label_tag }}  
+            {{ OrderCreateForm.full_name }}
+            
+            {{ OrderCreateForm.email.label_tag }}  
+            {{ OrderCreateForm.email }}
+            
+            {{ OrderCreateForm.address.label_tag }}  
+            {{ OrderCreateForm.address }}
+            
+            {{ OrderCreateForm.address2.label_tag }}  
+            {{ OrderCreateForm.address2 }}
+            
+            {{ OrderCreateForm.city.label_tag }}  
+            {{ OrderCreateForm.city }}
+            
+            {{ OrderCreateForm.zip_code.label_tag }}  
+            {{ OrderCreateForm.zip_code }}
+            
+            {{ OrderCreateForm.country.label_tag }}  
+            {{ OrderCreateForm.country }}
+            
+            {{ OrderCreateForm.phone.label_tag }}  
+            {{ OrderCreateForm.phone }}
+        </div>
+
+        
+        <div class="w-1/4">
+            
+            <div class="flex-grow bg-white border rounded-md p-4">
+                <h3 class="font-semibold text-lg mb-4">Items:</h3>
+                {% for item in cart.items.all %}
+                <a href="{% url 'shop:product_detail' item.product.category.slug item.product.slug %}">
+                    <h4 class="font-semibold text-lg">{{ item.product.name }}</h4>
+                </a>
+                <p class="text-gray-700">{{ item.product.description }}</p>
+                <p class="text-indigo-600">${{ item.product.price }}</p>
+
+                <div class="flex items-center space-x-2">
+                    <p class="text-gray-600 font-semibold">Quantity:</p>
+                    <p>{{ item.quantity }}</p>
+                </div>
+                {% endfor %}
+                <hr class="my-4">
+                <p><strong>Total price: ${{ cart.get_total_price }}</strong></p>
+            </div>
+        </div>
+        <div class="w-2/5">
+
+    
+            <div class="p-4 mt-4 border rounded-md">
+                <h3 class="text-xl font-semibold mb-4">Payment Method</h3>
+                <div class="mb-6">
+                    <label for="payment_method" class="block text-sm font-medium text-gray-700">Choose a payment method</label>
+                    <select id="payment_method" name="payment_method" class="w-full py-4 px-6 rounded-xl border mb-6">
+                        <option value="paypal">PayPal</option>
+                        <option value="bank_transfer">Bank Transfer</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full px-6 py-3 bg-green-600 hover:bg-green-800 rounded-xl text-white mt-4">
+                    Checkout
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

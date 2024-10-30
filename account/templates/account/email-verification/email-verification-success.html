@@ -1,0 +1,13 @@
+{% extends 'account/base-verification.html' %}
+{% block title %}{% endblock %}
+
+{% block content %}
+    <div class="bg-white shadow-md rounded-xl p-10 w-full max-w-lg">
+        <h4 class="text-2xl font-bold text-center mb-6">Account Verified</h4>
+        <hr class="mb-6">
+        <p class="text-center text-gray-700 text-lg mb-8">Your account was successfully verified! You can now log in to access all features and manage your settings.</p>
+        <div class="flex justify-center">
+            <a href="{% url 'account:login-view' %}" class="bg-blue-500 text-white text-lg px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">Login now</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends 'admin_panel/core/base.html' %}
+{% load static %}
+{% load tailwind_filters %}
+{% block title %}Admin-Panel{% endblock %}
+
+{% block content %}
+<div class="container mx-auto p-4 flex">
+    <div class="w-1/3 text-center">
+        <div class="shadow-md bg-blue-500 rounded-md p-6 text-white mr-6 text-2xl">
+            <h1 class="mb-4">Total Orders</h1>
+            <hr class="mb-4">
+            <p>{{ orders|length }}</p>
+        </div>
+    </div>
+    <div class="w-1/3 text-center">
+        <div class="shadow-md bg-blue-600 rounded-md p-6 text-white mr-6 text-2xl">
+            <h1 class="mb-4">Orders Delivered</h1>
+            <hr class="mb-4">
+            <p>{{order_delivered}}</p>
+        </div>
+    </div>
+    <div class="w-1/3 text-center">
+        <div class="shadow-md bg-blue-400 rounded-md p-6 text-white mr-6 text-2xl">
+            <h1 class="mb-4">Orders Pending</h1>
+            <hr class="mb-4">
+            <p>{{order_pending}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto p-4 flex mt-10">
+    <div class="w-2/4 text-center">
+        <div class="shadow-md bg-white rounded-md p-6 mr-6 ">
+            <div class="flex justify-center text-2xl">
+                <h1 class="mb-4 mr-2">Customers: </h1>
+                <p>{{len_users}}</p>
+            </div>
+            <hr class="mb-4">
+
+            <div>
+                <div class="mb-6">
+                    <form method="get" class="flex space-x-4 items-end">
+                        {% csrf_token %}
+                        <div class="w-1/5">
+                            {{ UserFilter.form.name|as_crispy_field }}
+                        </div>
+                        <div class="w-1/5">
+                            {{ UserFilter.form.email|as_crispy_field }}
+                        </div>
+
+                        <button type="submit" class="w-auto py-2 px-4 bg-blue-600 hover:bg-blue-800 text-white rounded-xl ">
+                            Search
+                        </button>
+                        
+                        <a href="{% url 'admin_panel:add_user' %}" class="inline-block py-2 px-6 bg-green-600 hover:bg-green-800 text-white rounded-xl">
+                        Add user
+                        </a>
+                    </form>
+                </div>
+            </div>
+
+            {% if users %}
+                {% for user in pages %}
+                <div class="text-sm grid grid-cols-3 gap-4 py-2 {% cycle 'bg-gray-100' '' %}">
+                    <p class="px-2">
+                        <a href="{% url 'admin_panel:user_view' user.id %}">{{ user.name }}</a>
+                    </p>
+                    <p class="px-2">{{ user.email }}</p>
+
+                    <p class="">
+                        <a href="{% url 'admin_panel:user_view' user.id %}" class="py-1 px-2 bg-blue-600 hover:bg-blue-800 text-white rounded-md">View</a>
+                    </p>
+                </div>
+                {% endfor %}
+            {% else %}
+                <p class="text-center text-gray-500">No customers found.</p>
+            {% endif %}
+
+            <div class="mt-8">
+                {% include 'admin_panel/core/partials/pagination.html' %}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="w-3/4 text-center">
+        <div class="shadow-md bg-white rounded-md p-6 mr-6 text-2xl">
+            <h1 class="mb-4">Orders:</h1>
+            <hr class="mb-4">
+            <div class="grid grid-cols-5 gap-4 py-2 font-bold text-center text-sm">
+                <p class="px-2">Is paid</p>
+                <p class="px-2">Created At</p>
+                <p class="px-2">Status</p>
+                <p class="px-2 text-right mr-5">Email</p>
+                <p class="px-2 text-right mr-4 mb-4">View</p>
+            </div>
+            {% for order in orders %}
+            <div class="grid grid-cols-5 gap-4 py-2 {% cycle 'bg-gray-100' '' %} text-sm">
+                <p class="px-2">
+                    {% if order.is_paid %}
+                        <span class="text-green-500 font-semibold">Yes</span>
+                    {% else %}
+                        <span class="text-red-500 font-semibold">No</span>
+                    {% endif %}
+                </p>
+                
+                <p class="px-2">{{ order.created_at }}</p>
+                <p class="px-2">{{ order.status }}</p>
+                <p class="px-2">{{ order.email }}</p>
+               
+
+                <div class="px-2 text-right">
+                    <a href="{% url 'admin_panel:order_view' order.id %}" class="py-2 px-4 bg-blue-600 hover:bg-blue-800 text-white rounded-md">View</a>
+                </div>
+                
+            </div>
+        {% endfor %}
+
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+

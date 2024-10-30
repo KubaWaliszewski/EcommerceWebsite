@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block content %}
+<div class="container mx-auto max-w-lg shadow-md bg-white p-6 rounded-lg mt-10">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">Thank you for your order!</h2>
+    
+    {% include 'payments/partials/list_products_in_order.html' %}
+    
+    <hr class="mt-4 mb-4">
+
+    <div>
+        <p class="text-lg font-medium text-gray-800 mb-2">Transfer money to the following account:</p>
+        <p class="text-gray-700"><strong>Account Number:</strong> PL96119010140000072219812674</p>
+        <p class="text-gray-700"><strong>Transfer Title:</strong> Order {{ order.id }} - {{ order.full_name }}</p>
+    </div>
+
+    <div class="mt-6">
+        <p class="text-gray-600">Please make sure to include the correct transfer title to ensure the payment is properly allocated.</p>
+    </div>
+</div>
+{% endblock %}

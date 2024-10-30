@@ -1,0 +1,82 @@
+<aside class="w-1/4 p-6 bg-gray-200 shadow-lg rounded-lg text-lg font-semibold mr-6">
+    <a href="{% url 'client:my-profile' %}">
+        <h1 class="text-3xl text-gray-900 mb-4">My account</h1>
+    </a>
+
+
+    <table class="table-auto w-full border-collapse">
+        <tbody>
+
+            <tr>
+                <td class="p-4">
+                    <a href="{% url 'client:my-addresses' %}" 
+                       class="block py-2 px-4 rounded-lg transition duration-300
+                       {% if request.resolver_match.url_name == 'client:my-addresses' %}
+                           bg-gray-400 text-gray-900 shadow-md
+                       {% else %}
+                           text-gray-800 hover:bg-gray-400 hover:text-white
+                       {% endif %}">
+                        My addresses
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="p-4">
+                    <a href="{% url 'client:my-orders' %}" 
+                       class="block py-2 px-4 rounded-lg transition duration-300
+                       {% if request.resolver_match.url_name == 'client:my-orders' %}
+                           bg-gray-400 text-gray-900 shadow-md
+                       {% else %}
+                           text-gray-800 hover:bg-gray-400 hover:text-white
+                       {% endif %}">
+                        My Orders
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="p-4">
+                    <a href="{% url 'client:password_change' %}" 
+                       class="block py-2 px-4 rounded-lg transition duration-300
+                       {% if request.resolver_match.url_name == 'client:password_change' %}
+                           bg-gray-400 text-gray-900 shadow-md
+                       {% else %}
+                           text-gray-800 hover:bg-gray-400 hover:text-white
+                       {% endif %}">
+                        Change password
+                    </a>
+                </td>
+            </tr>
+
+        
+            <tr>
+                <td class="p-4">
+                    <a href="{% url 'client:delete-account' %}" 
+                       class="block py-2 px-4 rounded-lg transition duration-300
+                       {% if request.resolver_match.url_name == 'client:delete-account' %}
+                           bg-gray-400 text-gray-900 shadow-md
+                       {% else %}
+                           text-gray-800 hover:bg-gray-400 hover:text-white
+                       {% endif %}">
+                        Delete account
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="p-4">
+                    <a href="{% url 'account:logout-user' %}" 
+                       class="block py-2 px-4 rounded-lg transition duration-300
+                       {% if request.resolver_match.url_name == 'account:logout-user' %}
+                           bg-red-400 text-red-900 shadow-md
+                       {% else %}
+                           text-red-800 hover:bg-red-400 hover:text-white
+                       {% endif %}">
+                        Logout
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</aside>

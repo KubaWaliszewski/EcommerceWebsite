@@ -1,0 +1,27 @@
+<nav aria-label="Pagination">
+    <ul class="flex justify-center space-x-2">
+        {% if pages.has_previous %}
+            <li>
+                <a href="?page={{ pages.previous_page_number }}&{{ filters }}" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">< Previous</a>
+            </li>
+        {% endif %}
+
+        {% for num in pages.paginator.page_range %}
+            {% if pages.number == num %}
+                <li>
+                    <span class="px-4 py-2 bg-blue-500 text-white rounded-md">{{ num }}</span>
+                </li>
+            {% elif num > pages.number|add:'-3' and num < pages.number|add:'3' %}
+                <li>
+                    <a href="?page={{ num }}&{{ filters }}" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">{{ num }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        {% if pages.has_next %}
+            <li>
+                <a href="?page={{ pages.next_page_number }}&{{ filters }}" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">Next ></a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>

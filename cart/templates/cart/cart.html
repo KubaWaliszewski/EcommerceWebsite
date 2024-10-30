@@ -1,0 +1,62 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    My Cart
+{% endblock %}
+
+{% block content %}
+
+<h2 class="text-2xl font-semibold mb-4">My cart</h2>
+<ul class="space-y-4">
+    {% if cart %}
+        {% for item in cart.items.all %}
+
+            <li class="flex items-center p-4 bg-white shadow-md rounded-lg">
+                <a href="{% url 'shop:product_detail' item.product.category.slug item.product.slug %}">
+                    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="w-24 mr-4">
+                </a>
+                <div class="flex-grow">
+                    <a href="{% url 'shop:product_detail' item.product.category.slug item.product.slug %}">
+                        <h3 class="font-semibold text-lg">{{ item.product.name }}</h3>
+                    </a>
+                    <p class="text-gray-700">{{ item.product.description }}</p>
+                    <p class="text-indigo-600">${{ item.product.price }}</p>
+                    
+                    <div class="flex items-center space-x-2">
+                        <p class="text-gray-600 font-semibold">Quantity:</p>
+
+                        
+
+                        <a href="{% url 'cart:change_quantity' item.product.id %}?action=decrease" class="hover:text-red-600">
+                            <p class="font-semibold text-2xl">-</p>
+                        </a>
+                        <p>{{ item.quantity }}</p>
+                        <a href="{% url 'cart:change_quantity' item.product.id %}?action=increase" class="hover:text-green-600">
+                            <p class="font-semibold text-2xl">+</p>
+                        </a>
+                        <br><br>
+                    </div>
+                    
+                        <form action="{% url 'cart:cart_remove' item.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="bg-red-600 hover:bg-red-800 text-white px-3 py-1 rounded">Remove</button>
+                        </form>
+                    
+
+                </div>
+            </li>
+        {% endfor %}
+    <p><strong>Total price: ${{ cart.get_total_price }}</strong></p>
+    <form action="{% url 'orders:order_create' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="px-6 py-3 bg-green-600 hover:bg-green-800 rounded-xl text-white mt-4">Proceed to checkout</button>
+    </form>
+    {% else %}
+        <p>Your cart is empty.</p>
+    
+        
+        
+        
+    {% endif %}
+</ul>    
+{% endblock %}

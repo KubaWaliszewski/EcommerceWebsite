@@ -1,0 +1,18 @@
+{% extends 'admin_panel/core/base.html' %}
+{% load static %}
+{% block title %}Admin-Panel{% endblock %}
+
+{% block content %}
+<div class="container shadow-md rounded-xl p-6 bg-white">
+    <h1 class="text-2xl mb-4">Add Product</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ProductCreationForm.as_p}}
+        <button type="submit" class="inline-block py-2 px-6 bg-blue-600 hover:bg-blue-800 text-white rounded-xl ">Add Product</button>
+    </form>
+</div>
+
+{% endblock %}
+
+

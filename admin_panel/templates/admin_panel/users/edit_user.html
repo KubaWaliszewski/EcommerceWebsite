@@ -1,0 +1,33 @@
+{% extends 'admin_panel/core/base.html' %}
+{% load static %}
+{% block title %}Admin-Panel{% endblock %}
+
+{% block content %}
+<div class="container shadow-md rounded-xl bg-white p-6">
+    <h1 class="text-2xl mb-6">Edit User</h1>
+
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ EditUserForm.first_name.label_tag }}
+        {{ EditUserForm.first_name }} 
+        {{ EditUserForm.last_name.label_tag }}
+        {{ EditUserForm.last_name }} 
+        {{ EditUserForm.email.label_tag }}
+        {{ EditUserForm.email }} 
+        {{ EditUserForm.role.label_tag }}
+        {{ EditUserForm.role }} 
+
+        <div class="flex items-center mb-6">
+            <label for="{{ EditUserForm.is_active.id_for_label }}" class="text-lg leading-tight mr-4">Is active:</label>
+            {{ EditUserForm.is_active }} 
+        </div> 
+        <button type="submit" class="inline-block py-2 px-6 bg-blue-600 hover:bg-blue-800 text-white rounded-xl mb-6 mt-4">Submit</button>
+    </form>
+                    
+    <a href="{% url 'admin_panel:delete_user' user.id %}" class="inline-block py-2 px-6 bg-red-600 hover:bg-red-800 text-white rounded-xl">Delete Account</a>
+</div>
+
+{% endblock %}
+
+

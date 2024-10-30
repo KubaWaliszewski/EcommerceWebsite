@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+
+<div class="container mx-auto p-4 flex">
+    {% include 'shop/partials/category_label.html' %}
+    <main class="w-3/4">
+        {% if category %}
+            <h1 class="text-3xl">{{ category.name }}</h1>
+            {% include 'shop/partials/products.html' %}
+        {% else %}
+        <h1 class="text-3xl">All products:</h1>
+            {% include 'shop/partials/products.html' %} 
+        {% endif %}
+    </main>
+</div>
+
+<div class="mt-6">
+    {% include 'admin_panel/core/partials/pagination.html' %}
+</div>
+
+
+
+{% endblock %}

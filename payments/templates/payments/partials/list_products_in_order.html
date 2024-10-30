@@ -1,0 +1,16 @@
+<p class="text-sm text-gray-600 mb-4">Order ID: <span class="font-semibold">{{ order.id }}</span></p>
+
+<ul class="divide-y divide-gray-200 mb-6">
+    {% for item in order.items.all %}
+    <li class="py-4 flex justify-between items-center">
+        <div>
+            <strong class="text-lg text-gray-700">{{ item.product.name }}</strong> 
+            <span class="text-sm text-gray-500">x {{ item.quantity }}</span>
+        </div>
+        <span class="text-lg font-semibold text-gray-800">${{ item.price }}</span>
+    </li>
+    {% endfor %}
+</ul>
+<div class="text-right mb-6">
+    <p class="text-xl font-semibold text-gray-900">Total: ${{ order.get_total_cost }}</p>
+</div>

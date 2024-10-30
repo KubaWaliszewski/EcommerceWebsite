@@ -1,0 +1,17 @@
+{% extends 'account/base-verification.html' %}
+{% block title %}{% endblock %}
+
+{% block content %}
+    <div class="bg-white shadow-md rounded-xl p-10 w-full max-w-lg">
+        <h4 class="text-2xl font-bold text-center mb-6">Resent email</h4>
+        <hr class="mb-6">
+        <p class="text-center text-gray-700 text-lg mb-8">A Re-sent email by clicking button below:</p>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="flex justify-center">
+                <button type="submit" class="px-6 py-3 text-white bg-blue-500 hover:bg-blue-700 rounded-lg">Resend email</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

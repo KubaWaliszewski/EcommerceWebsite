@@ -1,0 +1,77 @@
+{% extends 'admin_panel/core/base.html' %}
+{% load static %}
+{% load tailwind_filters %}
+{% block title %}Admin-Panel{% endblock %}
+
+{% block content %}
+
+<div class="container shadow-md rounded-xl p-6 bg-gray-100">
+    <h1 class="text-3xl text-center mb-6 font-semibold">Categories management</h1>
+
+    <div class="container mx-auto p-4 flex">
+        <div class="w-2/5 mr-4">
+            <div class="container shadow-md rounded-xl p-6 bg-white">
+
+            <h1 class="text-2xl mb-4">Add Category</h1>
+
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{AddCategoryForm.as_p}}
+                <button type="submit" class="inline-block py-2 px-6 bg-blue-600 hover:bg-blue-800 text-white rounded-xl ">Add Category</button>
+            </form>
+
+            </div>
+        </div>
+        <div class="w-2/5">
+            <div class="shadow-md bg-white rounded-xl p-6 mr-6 ">
+                <div class="flex justify-center text-2xl">
+                    <h1 class="mb-4 mr-2">Categories: </h1>
+                    <p>{{len_category}}</p>
+                </div>
+                <hr class="mb-4">
+
+                <div>
+                    <div class="mb-4">
+                        <form method="get" class="flex space-x-4 items-end">
+                            {% csrf_token %}
+                            {{ CategoryFilter.form.name|as_crispy_field }}
+
+                            <button type="submit" class="w-auto py-2 px-4 bg-blue-600 hover:bg-blue-800 text-white rounded-xl ">
+                                Search
+                            </button>
+                            
+                        </form>
+                    </div>
+                </div>
+
+                {% if category %}
+                    {% for category in pages %}
+                    <div class="text-sm grid grid-cols-4 gap-4 py-2 {% cycle 'bg-gray-100' '' %}">
+                        <p class="px-2">
+                            <a href="{% url 'shop:product_list_by_category' category.slug %}">{{ category.name }}</a>
+                        </p>
+                        
+                        <form method="post" action="{% url 'admin_panel:category' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="delete_category" value="{{ category.id }}">
+                            <p class="px-2 text-right">
+                                <button type="submit" class="py-1 px-2 bg-red-600 hover:bg-red-800 text-white rounded-md">Delete</button>
+                            </p>
+                        </form>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="text-center text-gray-500 mt-4">No categories found.</p>
+                {% endif %}
+            
+                <div class="mt-8">
+                    {% include 'admin_panel/core/partials/pagination.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+

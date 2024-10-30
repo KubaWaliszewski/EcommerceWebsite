@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="mt-6">
+    <div class="">
+        <div class="flex justify-center">
+            <div class="">
+                <img style="width: 100%; height: auto;" class="d-block w-100" src="{% static 'img/Ecommerce Website.png' %}" alt="First slide">
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+
+<div class="container mx-auto p-4">
+    <div class="w-full">
+        <h1 class="text-3xl mb-4 font-semibold">Our Newest Products:</h1>
+        {% include 'shop/partials/products.html' %}
+    </div>
+    
+</div>
+
+
+<div class="container mx-auto p-4 mt-10">
+    <div class="w-full">
+        <h1 class="text-3xl mb-4 font-semibold">Electronics:</h1>
+        {% include 'shop/partials/category_products.html' with category_products=electronics_products %}
+    </div>
+    <a href="{% url 'shop:product_list_by_category' 'electronics' %}" class="justify-items-center px-6 py-3 bg-blue-700 hover:bg-blue-800 rounded-xl text-white">More...</a>
+</div>
+
+
+<div class="container mx-auto p-4 mt-10">
+    <div class="w-full">
+        <h1 class="text-3xl mb-4 font-semibold">Tools:</h1>
+        {% include 'shop/partials/category_products.html' with category_products=tools_products %}
+    </div>
+    <a href="{% url 'shop:product_list_by_category' 'tools' %}" class="justify-items-center px-6 py-3 bg-blue-700 hover:bg-blue-800 rounded-xl text-white">More...</a>
+</div>
+
+{% endblock %}

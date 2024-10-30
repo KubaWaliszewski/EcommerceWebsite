@@ -1,0 +1,26 @@
+{% extends 'admin_panel/core/base.html' %}
+
+{% block content %}
+    <h1 class="text-2xl mb-4">Chat admin</h1>
+
+
+    <form method="post" action="{% url 'toggle_chat' %}">
+        {% csrf_token %}
+        
+            {% if show_chat %}
+                <button class="inline-block py-2 px-6 bg-red-600 hover:bg-red-800 text-white rounded-xl">Disable Chat</button>
+            {% else %}
+                <button class="inline-block py-2 px-6 bg-blue-600 hover:bg-blue-800 text-white rounded-xl">Enable Chat</button>
+            {% endif %}
+        
+    </form>
+
+    <hr class="my-6">
+    <div class="mt-8">
+        <h2 class="mb-4 text-lg">Rooms</h2>
+
+        {% include 'chat/partials/room_list.html' %}
+    </div>
+
+{% endblock %}
+

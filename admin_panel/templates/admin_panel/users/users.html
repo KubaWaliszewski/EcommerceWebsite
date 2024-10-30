@@ -1,0 +1,65 @@
+{% extends 'admin_panel/core/base.html' %}
+
+{% load static %}
+{% load tailwind_filters %}
+
+{% block title %}Admin-Panel{% endblock %}
+
+{% block content %}
+
+<div class="container shadow-md rounded-xl p-6 bg-white">
+    <h1 class="text-2xl">Users</h1>
+
+    <div class="mt-8 ">
+        
+
+        <a href="{% url 'admin_panel:add_user' %}" class="inline-block py-2 px-6 bg-blue-600 hover:bg-blue-800 text-white rounded-xl mb-4">Add users</a>
+    </div>
+    <hr class="my-4">
+    
+    <div>
+        <h1 class="text-2xl mb-4">Filters</h1>
+        <div class="">
+            <form method="get" class="flex space-x-4 items-end">
+                {% csrf_token %}
+                <div class="w-1/5">
+                    {{ UserFilter.form.name|as_crispy_field }}
+                </div>
+                <div class="w-1/5">
+                    {{ UserFilter.form.email|as_crispy_field }}
+                </div>
+                <div class="w-1/5">
+                    {{ UserFilter.form.role|as_crispy_field }}
+                </div>
+                <button type="submit" class="w-auto py-2 px-4 bg-blue-600 hover:bg-blue-800 text-white rounded-xl ">
+                    Search
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="mt-10">
+        {% for user in pages %}
+            <div class="grid grid-cols-4 gap-4 py-2 {% cycle 'bg-gray-100' '' %}">
+                <p class="px-2">
+                    <a href="{% url 'admin_panel:user_view' user.id %}">{{ user.name }}</a>
+                </p>
+                <p class="px-2">{{ user.email }}</p>
+                <p class="px-2">{{ user.get_role_display }}</p>
+                <p class="px-2 text-right">
+                    <a href="{% url 'admin_panel:edit_user' user.id %}" class="underline">Edit</a>
+                </p>
+                
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="mt-6">
+    {% include 'admin_panel/core/partials/pagination.html' %}
+</div>
+
+{% endblock %}
+
+
