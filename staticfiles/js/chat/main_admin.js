@@ -114,7 +114,6 @@ function onChatMessage(data) {
  */
 
 
-
 chatSocket = new WebSocket(`wss://${window.location.host}/ws/${chatRoom}/`)
 
 chatSocket.onmessage = function(e) {

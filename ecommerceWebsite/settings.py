@@ -168,9 +168,11 @@ if not DEBUG:
     AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
 
+    STATICFILES_STORAGE = "storages.backends.s3boto3.S3StaticStorage"
+    
     STORAGES = {
         "default": {
-            "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
+            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
         },
         "staticfiles": {
             "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
