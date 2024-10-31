@@ -163,16 +163,14 @@ USE_TZ = True
 
 
 # Amazon S3 Configuration (for production)
-if not DEBUG:
+if DEBUG:
     AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
 
-    STATICFILES_STORAGE = "storages.backends.s3boto3.S3StaticStorage"
-    
     STORAGES = {
         "default": {
-            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+            "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
         },
         "staticfiles": {
             "BACKEND": "storages.backends.s3boto3.S3StaticStorage",
@@ -182,7 +180,8 @@ if not DEBUG:
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
-
+    AWS_S3_FILE_OVERWRITE = False
+    
 else:
     # Local static and media files configuration (for development)
     STATIC_URL = '/static/'
