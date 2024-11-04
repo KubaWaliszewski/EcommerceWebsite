@@ -37,23 +37,23 @@ function scrollToBottom() {
 }
 
 
-function getCookie(name) {
-    var cookieValue = null
+function getCsrfToken() {
+    var cookieValue = null;
 
-    if (document.cookie && document.cookie!== '') {
-        var cookies = document.cookie.split(';')
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
 
         for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i].trim()
+            var cookie = cookies[i].trim();
 
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1))
-                break
+            if (cookie.substring(0, 'csrftoken='.length) === 'csrftoken=') {
+                cookieValue = decodeURIComponent(cookie.substring('csrftoken='.length));
+                break;
             }
         }
     }
     console.log("CSRF Cookie Retrieved:", cookieValue);
-    return cookieValue
+    return cookieValue;
 }
 
 function sendMessage() {
@@ -158,7 +158,7 @@ async function joinChatRoom() {
     await fetch(`/api/create-room/${chatRoomUuid}/`, {
         method: 'POST',
         headers: {
-            'X-CSRFToken': getCookie('csrftoken'),
+            'X-CSRFToken': getCsrfToken(''),
         },
         body: data
     })

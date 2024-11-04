@@ -14,9 +14,7 @@ from account.models import CustomUser
 from core.decorators import admin_only, check_group
 
 
-from django.views.decorators.csrf import csrf_exempt
 
-@csrf_exempt
 @require_POST
 def create_room(request, uuid):
     name = request.POST.get('name', '')
