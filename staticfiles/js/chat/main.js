@@ -52,7 +52,7 @@ function getCookie(name) {
             }
         }
     }
-
+    console.log("CSRF Cookie Retrieved:", cookieValue);
     return cookieValue
 }
 
