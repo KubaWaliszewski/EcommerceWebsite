@@ -54,6 +54,12 @@ EcommerceWebsite is a fully-featured e-commerce platform built using Django. The
 
 ![Example Ecommerce Website](https://github.com/user-attachments/assets/283f5852-abf9-4bcc-a568-e17fa05ce718)
 
+## Live Demo
+
+The project is hosted on Render and can be accessed at the following link: [Live Demo](https://ecommercewebsite-zcj7.onrender.com).
+
+*Please note:* The website might take a few moments to load initially, as it is hosted on Render’s free tier, which requires the server to "wake up" from an idle state.
+
 ## Getting Started
 
 ### Prerequisites
