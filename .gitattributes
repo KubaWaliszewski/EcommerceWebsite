@@ -3,3 +3,4 @@
 
 staticfiles/admin/js/* linguist-detectable=false
 staticfiles/admin/css/* linguist-detectable=false
+*.py linguist-language=Python
