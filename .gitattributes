@@ -2,7 +2,7 @@
 * text=auto
 
 # Ignoruj wszystkie pliki w folderze staticfiles/admin
-staticfiles/admin/* linguist-ignore
+staticfiles/admin/* linguist-vendored
 
 # Ustaw pliki JS w staticfiles/js jako JavaScript
 staticfiles/js/* linguist-language=JavaScript
