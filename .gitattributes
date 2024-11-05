@@ -1,7 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Ignore libraries and static files for language stats
-node_modules/* linguist-vendored
-staticfiles/* linguist-vendored
-
+staticfiles/admin/* linguist-ignore
+*.py linguist-language=Python
