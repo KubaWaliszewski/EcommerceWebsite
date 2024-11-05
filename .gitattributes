@@ -2,10 +2,9 @@
 * text=auto
 
 # Ignoruj wszystkie pliki w folderze staticfiles/admin
-staticfiles/admin/* linguist-documentation
-
-# Ustaw pliki JS w staticfiles/js jako JavaScript
-staticfiles/js/* linguist-language=JavaScript
+staticfiles/admin/* linguist-vendored=false
+staticfiles/admin/* linguist-vendored
+staticfiles/admin/* linguist-ignore
 
 # Ustaw pliki Pythona jako główny język
 *.py linguist-language=Python
