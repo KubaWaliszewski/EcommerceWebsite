@@ -1,8 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-staticfiles/admin linguist-ignore
-staticfiles/admin/* linguist-ignore
-staticfiles/* linguist-vendored
-staticfiles/admin/* linguist-vendored
-staticfiles/admin/* linguist-vendored=true
+
+*/staticfiles/admin/* linguist-ignore
+*/staticfiles/admin/* linguist-vendored=true
