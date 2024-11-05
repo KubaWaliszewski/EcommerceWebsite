@@ -41,11 +41,3 @@ def toggle_chat(request):
     config.save()
 
     return redirect('chat:admin')
-#
-#
-#
-#
-#
-#
-#
-#
