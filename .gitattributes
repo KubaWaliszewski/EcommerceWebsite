@@ -1,4 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-staticfiles/admin/js/* linguist-detectable=false
+staticfiles/admin/js/ linguist-detectable=false
