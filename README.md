@@ -51,8 +51,9 @@ EcommerceWebsite is a fully-featured e-commerce platform built using Django. The
 - **Frontend:** Tailwind CSS, JavaScript.
 - **Others:** Django Environ, Whitenoise, crispy-tailwind, WebSockets.
 
-  ![eWebsite](https://github.com/user-attachments/assets/4cdd0a08-e3f9-41a6-b26c-aa349c972137)
 
+
+![Example Ecommerce Website](https://github.com/user-attachments/assets/18bb3ee0-2052-4747-b881-fd87fe2e4e19)
 ## Getting Started
 
 ### Prerequisites
