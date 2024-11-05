@@ -5,7 +5,3 @@
 node_modules/* linguist-vendored
 staticfiles/* linguist-vendored
 
-# Force Linguist to treat .py files as detectable
-*.py linguist-detectable=true
-*.js linguist-detectable=false
-*.css linguist-detectable=false
