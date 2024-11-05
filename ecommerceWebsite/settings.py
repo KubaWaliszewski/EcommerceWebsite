@@ -27,8 +27,12 @@ INTERNAL_IPS = env.list('INTERNAL_IPS')
 
 CSRF_TRUSTED_ORIGINS = ['https://ecommercewebsite-zcj7.onrender.com']
 
-SESSION_COOKIE_SECURE = True  
-CSRF_COOKIE_SECURE = True 
+if not DEBUG:
+    SESSION_COOKIE_SECURE = True  
+    CSRF_COOKIE_SECURE = True
+else:
+    SESSION_COOKIE_SECURE = False  
+    CSRF_COOKIE_SECURE = False
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 CRISPY_TEMPLATE_PACK = "tailwind"
