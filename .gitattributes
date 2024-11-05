@@ -1,11 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-staticfiles/admin/* linguist-ignore
-staticfiles/admin/* linguist-vendored=true
-*.css linguist-detectable=false
-staticfiles/admin/* linguist-detectable=false
-staticfiles/admin/js linguist-detectable=false
 staticfiles/admin/js/* linguist-detectable=false
-staticfiles/admin/js/SelectBox.js linguist-detectable=false
-staticfiles/admin/js/SelectBox.js linguist-vendored=true
