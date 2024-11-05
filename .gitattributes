@@ -1,6 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-node_modules/* linguist-vendored
-staticfiles/* linguist-vendored
-*.py linguist-language=Python
 
+# Force Linguist to treat .py files as detectable
+*.py linguist-detectable=true
+*.js linguist-detectable=false
+*.css linguist-detectable=false
+*.html linguist-detectable=false
