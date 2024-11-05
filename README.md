@@ -49,7 +49,7 @@ EcommerceWebsite is a fully-featured e-commerce platform built using Django. The
 ### Technologies Used
 - **Backend:** Django, Django Channels, PostgreSQL, Redis, AWS S3.
 - **Frontend:** Tailwind CSS, JavaScript.
-- **Others:** Django Environ, Whitenoise, crispy-tailwind, WebSockets.
+- **Others:** Django Environ, Whitenoise, WebSockets.
 
 
 ![Example Ecommerce Website](https://github.com/user-attachments/assets/283f5852-abf9-4bcc-a568-e17fa05ce718)
