@@ -1,10 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Ignoruj wszystkie pliki w folderze staticfiles/admin
-staticfiles/admin/* linguist-vendored=false
-staticfiles/admin/* linguist-vendored
-staticfiles/admin/* linguist-ignore
-
-# Ustaw pliki Pythona jako główny język
-*.py linguist-language=Python
+*.js linguist-detectable=false
+*.css linguist-detectable=false
