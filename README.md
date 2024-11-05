@@ -60,8 +60,6 @@ The project is hosted on Render and can be accessed at the following link: [Live
 
 *Please note:* The website might take a few moments to load initially, as it is hosted on Render’s free tier, which requires the server to "wake up" from an idle state.
 
-##
-This project is primarily written in Python, while the majority of the JavaScript files come from the staticfiles/admin directory, which inflates the language statistics.
 
 ## Getting Started
 
