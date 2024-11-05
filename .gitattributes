@@ -2,3 +2,5 @@
 * text=auto
 node_modules/* linguist-vendored
 staticfiles/* linguist-vendored
+*.py linguist-detectable=true
+*.js linguist-detectable=false
