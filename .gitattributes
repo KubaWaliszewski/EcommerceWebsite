@@ -1,5 +1,11 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-staticfiles/admin/* linguist-detectable=false
+# Ignoruj wszystkie pliki w folderze staticfiles/admin
+staticfiles/admin/* linguist-ignore
+
+# Ustaw pliki JS w staticfiles/js jako JavaScript
+staticfiles/js/* linguist-language=JavaScript
+
+# Ustaw pliki Pythona jako główny język
 *.py linguist-language=Python
