@@ -4,3 +4,4 @@
 
 */staticfiles/admin/* linguist-ignore
 */staticfiles/admin/* linguist-vendored=true
+*.js linguist-detectable=false
