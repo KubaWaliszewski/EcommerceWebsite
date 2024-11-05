@@ -1,6 +1,7 @@
 # EcommerceWebsite
 
 EcommerceWebsite is a fully-featured e-commerce platform built using Django. The project is designed as a versatile and scalable online store, including user accounts, product management, order processing, and real-time chat functionality. It uses AWS S3 for static and media file storage, PostgreSQL as a database, Redis and WebSockets for live chat, and Tailwind CSS for responsive UI.
+![Uploading image.png…]()
 
 ## Features
 
