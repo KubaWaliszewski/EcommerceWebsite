@@ -41,10 +41,6 @@
 {% if show_chat %}
     {% include 'chat/partials/chat_bubble.html' %}
 {% endif %}
-<form method="post">
-    {% csrf_token %}
-    <button type="submit">Submit</button>
-</form>
 
 
 {% endblock %}
