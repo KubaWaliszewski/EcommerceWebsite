@@ -1,5 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-staticfiles/admin/* linguist-ignore
+staticfiles/admin/* linguist-detectable=false
 *.py linguist-language=Python
