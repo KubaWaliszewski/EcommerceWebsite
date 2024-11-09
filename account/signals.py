@@ -20,7 +20,7 @@ def assign_group_based_on_role(sender, instance, created, **kwargs):
         group_name = 'Client'
         is_staff_status = False 
 
-    group, group_created = Group.objects.get_or_create(name=group_name)
+    group, _ = Group.objects.get_or_create(name=group_name)
 
 
     instance.groups.clear()

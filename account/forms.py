@@ -4,32 +4,28 @@ from django import forms
 from .models import CustomUser
 
 
+FIELD_STYLE = {'class': 'w-full py-4 px-6 rounded-xl border mb-6'}
+
 class CreateUserForm(UserCreationForm, forms.ModelForm):
     password1 = forms.CharField(
         label="Password",
         strip=False,
-        widget=forms.PasswordInput(attrs={'class': 'w-full py-4 px-6 rounded-xl border mb-6'}),
+        widget=forms.PasswordInput(attrs=FIELD_STYLE),
     )
     
     password2 = forms.CharField(
         label="Confirm Password",
         strip=False,
-        widget=forms.PasswordInput(attrs={'class': 'w-full py-4 px-6 rounded-xl border mb-6'}),
+        widget=forms.PasswordInput(attrs=FIELD_STYLE),
     )
 
     class Meta:
         model = CustomUser
         fields = ('email', 'first_name', 'last_name', 'password1', 'password2')
         widgets = {
-            'email': forms.TextInput(attrs={
-                'class': 'w-full py-4 px-6 rounded-xl border mb-6'
-            }),
-            'first_name': forms.TextInput(attrs={
-                'class': 'w-full py-4 px-6 rounded-xl border mb-6'
-            }),
-            'last_name': forms.TextInput(attrs={
-                'class': 'w-full py-4 px-6 rounded-xl border mb-6'
-            }),
+            'email': forms.TextInput(attrs=FIELD_STYLE),
+            'first_name': forms.TextInput(attrs=FIELD_STYLE),
+            'last_name': forms.TextInput(attrs=FIELD_STYLE),
         }
 
 
