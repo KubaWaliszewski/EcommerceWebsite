@@ -5,7 +5,6 @@ from client.models import Address
 from client.forms import AddressForm
 
 
-
 @login_required
 def add_address(request):
 
