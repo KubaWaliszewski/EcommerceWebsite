@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 from django.core.mail import send_mail
 from django.conf import settings
 from django.template.loader import render_to_string
@@ -15,4 +19,8 @@ def send_verification_email(user, request):
         'uid': urlsafe_base64_encode(force_bytes(user.pk)),
         'token': user_tokenizer_generate.make_token(user),
     })
+<<<<<<< Updated upstream
     send_mail(subject, message, settings.EMAIL_HOST_USER, [user.email])
+=======
+    send_mail(subject, message, settings.EMAIL_HOST_USER, [user.email])
+>>>>>>> Stashed changes
