@@ -2,9 +2,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django import forms
 
 from .models import CustomUser
+from core.constants import FIELD_STYLE
 
-
-FIELD_STYLE = {'class': 'w-full py-4 px-6 rounded-xl border mb-6'}
 
 class CreateUserForm(UserCreationForm, forms.ModelForm):
     password1 = forms.CharField(
@@ -31,15 +30,9 @@ class CreateUserForm(UserCreationForm, forms.ModelForm):
 
 class LoginForm(forms.Form):
     email = forms.CharField(
-        widget=forms.TextInput(attrs={
-            'class': 'w-full py-4 px-6 rounded-xl border mb-6',
-            'placeholder': 'Enter your email'
-        })
+        widget=forms.TextInput(attrs=FIELD_STYLE)
     )
     password = forms.CharField(
-        widget=forms.PasswordInput(attrs={
-            'class': 'w-full py-4 px-6 rounded-xl border mb-6',
-            'placeholder': 'Enter your password'
-        })
+        widget=forms.PasswordInput(attrs=FIELD_STYLE)
     )
 
