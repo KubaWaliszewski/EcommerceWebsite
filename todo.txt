@@ -1,9 +1,0 @@
-#account
-#admin_panel
-cart
-chat
-#client
-core
-#orders
-#payments
-#shop
