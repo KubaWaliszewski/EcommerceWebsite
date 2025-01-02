@@ -1,8 +1,8 @@
 from django.urls import path
 
-from .views.profile_views import my_profile, change_password, delete_account
-from .views.order_views import my_orders, order_detail
-from .views.address_views import add_address, set_default_address, my_addresses, edit_address
+from .interface.controllers.views.profile_views import my_profile, change_password, delete_account
+from .interface.controllers.views.order_views import my_orders, order_detail
+from .interface.controllers.views.address_views import add_address, set_default_address, my_addresses, edit_address
 
 
 app_name = 'client'

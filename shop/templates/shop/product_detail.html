@@ -52,9 +52,9 @@
 
     <div>
         <h2 class="text-2xl font-bold mb-4 mt-8">Reviews</h2>
-        {% if product.reviews.exists %}
+        {% if product.reviews %}
         <div class="grid grid-cols-5 gap-6">
-            {% for review in product.reviews.all %}
+            {% for review in product.reviews %}
                 <div class="bg-gray-100 rounded-md p-4 shadow-md">
                     <strong>{{ review.user.name }}</strong>
                     <p>Rating: {{ review.rating }}/5</p>

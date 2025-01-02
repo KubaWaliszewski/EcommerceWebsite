@@ -1,10 +1,10 @@
 from django.urls import path
 
-from .views.dashboard_views import admin_dashboard
-from .views.user_views import user_view, users, add_user, edit_user, delete_user
-from .views.product_views import products, add_product, edit_product
-from .views.order_views import order_view
-from .views.category_views import category
+from .interface.controllers.views.dashboard_views import admin_dashboard
+from .interface.controllers.views.user_views import user_view, users, add_user, edit_user, delete_user
+from .interface.controllers.views.product_views import products, add_product, edit_product
+from .interface.controllers.views.order_views import order_view
+from .interface.controllers.views.category_views import category
 
 
 app_name = 'admin_panel'

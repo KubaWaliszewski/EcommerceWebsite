@@ -1,6 +1,6 @@
 from django.db import models
 
-from account.models import CustomUser
+from account.infrastructure.orm.models import CustomUser
 
 
 class Message(models.Model):

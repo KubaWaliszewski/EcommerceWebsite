@@ -7,7 +7,7 @@ django_asgi_application = get_asgi_application()
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
 from channels.security.websocket import AllowedHostsOriginValidator
-from chat import routing
+from chat.infrastructure.websocket import routing
 
 
 

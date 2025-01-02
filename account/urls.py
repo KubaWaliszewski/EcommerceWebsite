@@ -1,8 +1,8 @@
 from django.urls import path, reverse_lazy
 from django.contrib.auth import views as auth_views
 
-from .views.auth_views import login_view, register_view, user_logout
-from .views.verification_views import (
+from .interface.controllers.auth_views import login_view, register_view, user_logout
+from .interface.controllers.verification_views import (
     email_verification, 
     email_verification_sent, 
     email_verification_failed, 

@@ -79,10 +79,10 @@ INSTALLED_APPS = [
 
     'django_filters',
 
+    'chat',
     'account',
     'admin_panel',
     'cart',
-    'chat',
     'client',   
     'core',
     'orders',
@@ -116,7 +116,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'cart.context_processors.cart_total_items',
+                'cart.interface.context_processors.cart_total_items',
             ],
         },
     },

@@ -1,9 +1,10 @@
 from django.contrib import admin
 
-from .models import Category, Product
+from .infrastructure.orm.models import Category, Product, Review
 
 
 admin.site.register(Category)
+admin.site.register(Review)
 
 
 class ProductAdmin(admin.ModelAdmin):

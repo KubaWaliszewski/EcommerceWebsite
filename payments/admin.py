@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import Payment
+from .infrastructure.orm.models import Payment
 
 admin.site.register(Payment)

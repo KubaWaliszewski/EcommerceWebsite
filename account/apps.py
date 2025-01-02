@@ -6,4 +6,5 @@ class AccountConfig(AppConfig):
     name = 'account'
 
     def ready(self):
-        import account.signals
+        import account.infrastructure.signals
+        import account.infrastructure.orm.models
