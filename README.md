@@ -9,12 +9,12 @@ EcommerceWebsite serves as a fully functional online store, designed with scalab
 
 ![Ecommerce Website](https://github.com/user-attachments/assets/9fd1dee8-650d-43d8-b559-2499a2dc7dbb)
 
-Why This Project Stands Out
+#Why This Project Stands Out
 Simplified Clean Architecture: Clear separation into modules (domain, application, interface, infrastructure).
 Professional Documentation: Use-case diagrams, ER diagrams, and requirement analysis tables.
 Scalable Infrastructure: PostgreSQL, AWS S3, Redis, and WebSockets integration.
 Real-Time Interactivity: WebSocket-based chat and live order updates.
-📚 Documentation
+#📚 Documentation
 1. Use-Case Diagrams
 Admin Panel Use-Cases: Detailed workflows for managing products, users, and orders.
 Client Use-Cases: Customer functionalities like checkout, order tracking, and account management.
