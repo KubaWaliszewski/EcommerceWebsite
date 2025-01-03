@@ -96,7 +96,6 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 - WebSocket-based live chat for real-time communication.
 - Admin and client chat interface powered by Django Channels, Daphne and Redis.
 - Client-side JavaScript and WebSocket integration for smooth communication.
-![example chat client](https://github.com/user-attachments/assets/d1845f41-ff1f-41a8-992f-daf262c3fe0f)
 
 ### 5. Client Area
 - User profile management: update addresses, view order history, and manage account.
