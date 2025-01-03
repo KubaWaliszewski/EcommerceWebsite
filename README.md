@@ -1,3 +1,4 @@
+
 # 🛒EcommerceWebsite
 A professional and scalable e-commerce platform built with Django following a simplified Clean Architecture approach.
 
@@ -10,10 +11,12 @@ EcommerceWebsite serves as a fully functional online store, designed with scalab
 ![Ecommerce Website](https://github.com/user-attachments/assets/9fd1dee8-650d-43d8-b559-2499a2dc7dbb)
 
 # Why This Project Stands Out
-Simplified Clean Architecture: Clear separation into modules (domain, application, interface, infrastructure).
-Professional Documentation: Use-case diagrams, ER diagrams, and requirement analysis tables.
-Scalable Infrastructure: PostgreSQL, AWS S3, Redis, and WebSockets integration.
-Real-Time Interactivity: WebSocket-based chat and live order updates.
+**Simplified Clean Architecture**
+
++ Clear separation into modules (domain, application, interface, infrastructure).
++ Professional Documentation: Use-case diagrams, ER diagrams, and requirement analysis tables.
++ Scalable Infrastructure: PostgreSQL, AWS S3, Redis, and WebSockets integration.
++ Real-Time Interactivity: WebSocket-based chat and live order updates.
 # 📚 Documentation
 + Use-Case Diagrams
 Admin Panel Use-Cases: [link](https://miro.com/app/board/uXjVLFDsZIw=/?share_link_id=486442718649)
@@ -33,7 +36,7 @@ Admin Panel Use-Cases: [link](https://miro.com/app/board/uXjVLFDsZIw=/?share_lin
   
   *A comprehensive table mapping system functionalities to inputs and outputs, ensuring clarity and traceability.*
 
-All documentation is hosted on Miro and Google Sheets, emphasizing project clarity and pre-development planning.
+*All documentation is hosted on Miro and Google Sheets, emphasizing project clarity and pre-development planning.*
 
 # 🛠️ Architecture Overview
 The project follows a simplified Clean Architecture pattern adapted to the Django MVT (Model-View-Template) structure. Below is an explanation of how Clean Architecture concepts map onto Django's MVT:
@@ -55,14 +58,11 @@ The project follows a simplified Clean Architecture pattern adapted to the Djang
  + ORM models handle database interactions.
  + Integration with external services (e.g., AWS S3, Redis).
  + Configuration and environment management.
-
-
-This structure ensures:
+___
+**This structure ensures:**
 
 ✅ Separation of Concerns: Clear boundaries between business logic, presentation, and data management.
-
 ✅ Scalability: Easy to extend functionality without introducing tight coupling.
-
 ✅ Testability: Individual layers can be tested independently.
 
 
@@ -70,29 +70,6 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 
 
 # 💡Key Features
-
-🔑 Authentication & Authorization
-Custom User Model (AbstractBaseUser)
-Email Verification & Password Reset
-Role-based Permissions (Client, Agent, Manager)
-📊 Admin Panel
-User, Product & Order Management
-Real-Time Chat Integration
-Advanced Filtering & Pagination
-🛍️ Shopping Experience
-Persistent Shopping Cart
-Address Autofill During Checkout
-💬 Real-Time Chat
-WebSocket-Powered Live Chat
-Seamless Admin-Client Communication
-💳 Payments & Orders
-PayPal Payment Gateway
-Order Status Tracking
-🧩 Technologies Used
-Backend: Django, Django Channels, PostgreSQL, Redis
-Frontend: Tailwind CSS, JavaScript
-Storage: AWS S3
-Other Tools: WebSockets, Django Environ, Whitenoise
 
 
 ### 1. Account Management
@@ -105,7 +82,7 @@ Other Tools: WebSockets, Django Environ, Whitenoise
 - Custom admin panel for managing products, categories, users, and orders.
 - CRUD operations on products, users, and orders.
 - Order status management with tracking of payment status.
-- Chat management for customer interactions.
+- Live chat management with customers
 - Pagination, search, and filtering for effective data management.
 
 ### 3. Shopping Cart
@@ -136,8 +113,9 @@ Other Tools: WebSockets, Django Environ, Whitenoise
 - Product detail pages with review options for purchased products.
 
 ### Technologies Used
-- **Backend:** Django, Django Channels, PostgreSQL, Redis, AWS S3.
+- **Backend:** Django, Django Channels, PostgreSQL, Redis.
 - **Frontend:** Tailwind CSS, JavaScript.
+-  **Storage:**  AWS S3
 - **Others:** Django Environ, Whitenoise, WebSockets.
 
 
