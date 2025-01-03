@@ -21,12 +21,12 @@ Detailed workflows for managing products, users, and orders.
 https://miro.com/app/board/uXjVLFDsZIw=/?share_link_id=486442718649
 
 3. Client Use-Cases
-4. Customer functionalities like checkout, order tracking, and account management.
+Customer functionalities like checkout, order tracking, and account management.
 https://miro.com/app/board/uXjVLFMSWmw=/?share_link_id=364783148560
-5. ER Diagram
+4. ER Diagram
 A visual representation of the database structure and relationships between entities like Users, Orders, Products, and Payments.
 https://miro.com/app/board/uXjVLFfztEY=/?share_link_id=13656592557
-6. Functional Requirements Table
+5. Functional Requirements Table
 A comprehensive table mapping system functionalities to inputs and outputs, ensuring clarity and traceability.
 https://docs.google.com/spreadsheets/d/1C8ueSmLesP9aJSpkPhJmyz85gJ8oASZDgeh0eb0EDaQ/edit?gid=0#gid=0
 
