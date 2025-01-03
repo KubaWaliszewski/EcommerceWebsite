@@ -18,20 +18,20 @@ Real-Time Interactivity: WebSocket-based chat and live order updates.
 + Use-Case Diagrams
 Admin Panel Use-Cases: [link](https://miro.com/app/board/uXjVLFDsZIw=/?share_link_id=486442718649)
 
-Detailed workflows for managing products, users, and orders.
+  *Detailed workflows for managing products, users, and orders.*
 
 
 + Client Use-Cases: [link](https://miro.com/app/board/uXjVLFMSWmw=/?share_link_id=364783148560)
   
-Customer functionalities like checkout, order tracking, and account management.
+  *Customer functionalities like checkout, order tracking, and account management.*
 
 + ER Diagram: [link](https://miro.com/app/board/uXjVLFfztEY=/?share_link_id=13656592557)
   
-A visual representation of the database structure and relationships between entities like Users, Orders, Products, and Payments.
+  *A visual representation of the database structure and relationships between entities like Users, Orders, Products, and Payments.*
 
 + Functional Requirements Table: [link](https://docs.google.com/spreadsheets/d/1C8ueSmLesP9aJSpkPhJmyz85gJ8oASZDgeh0eb0EDaQ/edit?gid=0#gid=0)
   
-A comprehensive table mapping system functionalities to inputs and outputs, ensuring clarity and traceability.
+  *A comprehensive table mapping system functionalities to inputs and outputs, ensuring clarity and traceability.*
 
 All documentation is hosted on Miro and Google Sheets, emphasizing project clarity and pre-development planning.
 
