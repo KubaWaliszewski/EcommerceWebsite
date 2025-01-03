@@ -38,20 +38,20 @@ All documentation is hosted on Miro and Google Sheets, emphasizing project clari
 # 🛠️ Architecture Overview
 The project follows a simplified Clean Architecture pattern adapted to the Django MVT (Model-View-Template) structure. Below is an explanation of how Clean Architecture concepts map onto Django's MVT:
 
-1. Domain:
+**Domain**
  + Core business logic and domain entities.
  + Defined in Django models and custom services where necessary.
  
-2. Application:
+**Application**
  + Orchestrates use-cases, coordinating domain and interface logic.
  + Includes service layers and utility functions to handle specific tasks.
  
-3. Interface:
+**Interface**
  + Views and forms serve as controllers.
  + User-facing interaction logic resides here.
  + API endpoints (if any) are defined in views.
 
-4. Infrastructure:
+**Infrastructure**
  + ORM models handle database interactions.
  + Integration with external services (e.g., AWS S3, Redis).
  + Configuration and environment management.
