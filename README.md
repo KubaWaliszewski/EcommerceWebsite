@@ -57,9 +57,13 @@ The project follows a simplified Clean Architecture pattern adapted to the Djang
  + Configuration and environment management.
 
 This structure ensures:
+
 ✅ Separation of Concerns: Clear boundaries between business logic, presentation, and data management.
+
 ✅ Scalability: Easy to extend functionality without introducing tight coupling.
+
 ✅ Testability: Individual layers can be tested independently.
+
 
 Even though the project follows Django's MVT structure, the principles of Clean Architecture are applied consistently to maintain clarity and modularity.
 
