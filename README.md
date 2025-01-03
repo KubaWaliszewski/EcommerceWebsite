@@ -56,7 +56,7 @@ The project follows a simplified Clean Architecture pattern adapted to the Djang
  + Integration with external services (e.g., AWS S3, Redis).
  + Configuration and environment management.
 
-***
+
 This structure ensures:
 
 ✅ Separation of Concerns: Clear boundaries between business logic, presentation, and data management.
