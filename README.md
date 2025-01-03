@@ -36,17 +36,32 @@ Admin Panel Use-Cases: [link](https://miro.com/app/board/uXjVLFDsZIw=/?share_lin
 All documentation is hosted on Miro and Google Sheets, emphasizing project clarity and pre-development planning.
 
 # 🛠️ Architecture Overview
-The project follows a simplified Clean Architecture pattern:
+The project follows a simplified Clean Architecture pattern adapted to the Django MVT (Model-View-Template) structure. Below is an explanation of how Clean Architecture concepts map onto Django's MVT:
 
-Domain: Core business logic and domain entities.
-Application: Use-cases coordinating domain and interface logic.
-Interface: Controllers, forms, and external-facing APIs.
-Infrastructure: ORM models, repositories, and external services (e.g., AWS, Redis).
++Domain:
+ +Core business logic and domain entities.
+ +Defined in Django models and custom services where necessary.
+ 
++Application:
+ +Orchestrates use-cases, coordinating domain and interface logic.
+ +Includes service layers and utility functions to handle specific tasks.
+ 
++Interface:
+ +Views and forms serve as controllers.
+ +User-facing interaction logic resides here.
+ +API endpoints (if any) are defined in views.
+
++Infrastructure:
+ +ORM models handle database interactions.
+ +Integration with external services (e.g., AWS S3, Redis).
+ +Configuration and environment management.
+
 This structure ensures:
+✅ Separation of Concerns: Clear boundaries between business logic, presentation, and data management.
+✅ Scalability: Easy to extend functionality without introducing tight coupling.
+✅ Testability: Individual layers can be tested independently.
 
-Separation of concerns
-Scalability
-Testability
+Even though the project follows Django's MVT structure, the principles of Clean Architecture are applied consistently to maintain clarity and modularity.
 
 
 # 💡Key Features
