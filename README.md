@@ -16,7 +16,7 @@ Scalable Infrastructure: PostgreSQL, AWS S3, Redis, and WebSockets integration.
 Real-Time Interactivity: WebSocket-based chat and live order updates.
 # 📚 Documentation
 + Use-Case Diagrams
-Admin Panel Use-Cases: [link](https://miro.com/app/board/uXjVLFDsZIw=/?share_link_id=486442718649)
+Admin Panel Use-Cases [link](https://miro.com/app/board/uXjVLFDsZIw=/?share_link_id=486442718649)
 Detailed workflows for managing products, users, and orders.
 
 
