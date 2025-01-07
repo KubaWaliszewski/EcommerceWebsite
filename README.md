@@ -1,4 +1,5 @@
 
+
 # 🛒EcommerceWebsite
 A professional and scalable e-commerce platform built with Django following a simplified Clean Architecture approach.
 
@@ -36,7 +37,7 @@ Admin Panel Use-Cases: [link](https://miro.com/app/board/uXjVLFDsZIw=/?share_lin
   
   *A comprehensive table mapping system functionalities to inputs and outputs, ensuring clarity and traceability.*
 
-*All documentation is hosted on Miro and Google Sheets, emphasizing project clarity and pre-development planning.*
+***All documentation is hosted on Miro and Google Sheets, emphasizing project clarity and pre-development planning.***
 
 # 🛠️ Architecture Overview
 The project follows a simplified Clean Architecture pattern adapted to the Django MVT (Model-View-Template) structure. Below is an explanation of how Clean Architecture concepts map onto Django's MVT:
@@ -80,6 +81,7 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 - User authentication: login, registration, and email verification.
 - Password reset functionality.
 - User groups with role-specific permissions (Client, Agent, Manager).
+<img src="[https://github.com/user-attachments/assets/d1845f41-ff1f-41a8-992f-daf262c3fe0f](https://github.com/user-attachments/assets/abf43e6d-58f7-4a8d-aa50-1d43f521c859)" alt="Account Management" width="400">
 
 ### 2. Admin Panel
 - Custom admin panel for managing products, categories, users, and orders.
@@ -96,6 +98,8 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 - WebSocket-based live chat for real-time communication.
 - Admin and client chat interface powered by Django Channels, Daphne and Redis.
 - Client-side JavaScript and WebSocket integration for smooth communication.
+
+<img src="https://github.com/user-attachments/assets/d1845f41-ff1f-41a8-992f-daf262c3fe0f" alt="" width="400">
 
 ### 5. Client Area
 - User profile management: update addresses, view order history, and manage account.
