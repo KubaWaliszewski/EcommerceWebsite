@@ -82,7 +82,7 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 - User authentication: login, registration, and email verification.
 - Password reset functionality.
 - User groups with role-specific permissions (Client, Agent, Manager).
-<img src="https://github.com/user-attachments/assets/abf43e6d-58f7-4a8d-aa50-1d43f521c859" alt="Account Management" width="400">
+<img src="https://github.com/user-attachments/assets/6b1d0f02-71d4-4610-b7e0-b6907e6060bc" alt="Account Management" width="400">
 
 ### 2. Admin Panel
 - Custom admin panel for managing products, categories, users, and orders.
