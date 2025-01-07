@@ -1,5 +1,6 @@
 
 
+
 # 🛒EcommerceWebsite
 A professional and scalable e-commerce platform built with Django following a simplified Clean Architecture approach.
 
@@ -81,7 +82,7 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 - User authentication: login, registration, and email verification.
 - Password reset functionality.
 - User groups with role-specific permissions (Client, Agent, Manager).
-<img src="[https://github.com/user-attachments/assets/d1845f41-ff1f-41a8-992f-daf262c3fe0f](https://github.com/user-attachments/assets/abf43e6d-58f7-4a8d-aa50-1d43f521c859)" alt="Account Management" width="400">
+<img src="https://github.com/user-attachments/assets/abf43e6d-58f7-4a8d-aa50-1d43f521c859" alt="Account Management" width="400">
 
 ### 2. Admin Panel
 - Custom admin panel for managing products, categories, users, and orders.
