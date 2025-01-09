@@ -1,6 +1,3 @@
-
-
-
 # 🛒EcommerceWebsite
 A professional and scalable e-commerce platform built with Django following a simplified Clean Architecture approach.
 
@@ -11,7 +8,7 @@ This project demonstrates a modular and maintainable structure, complete with ro
 EcommerceWebsite serves as a fully functional online store, designed with scalability, clean code principles, and separation of concerns in mind. The platform features user account management, admin controls, real-time chat, and seamless order and payment workflows.
 
 ![Ecommerce Website](https://github.com/user-attachments/assets/9fd1dee8-650d-43d8-b559-2499a2dc7dbb)
-
+<img src="https://github.com/user-attachments/assets/9cdd1d9a-25c0-47eb-ae4c-827fe24294a8" alt="Home " >
 # Why This Project Stands Out
 **Simplified Clean Architecture**
 
@@ -131,10 +128,17 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 - Order management with order status and tracking.
 - PayPal integration for online payments (sandbox mode supported).
 - Signals for real-time payment status updates.
+<img src="https://github.com/user-attachments/assets/67d43a4a-23de-4e54-9232-3df81d29a84a" alt="Contact" width="400">
+<img src="https://github.com/user-attachments/assets/3d3c0bb3-aaac-4d90-bc23-68478caeb348" alt="Contact" width="400">
 
 ### 8. Shop
 - Product listing with category filters and search functionality.
 - Product detail pages with review options for purchased products.
+
+![categories](https://github.com/user-attachments/assets/d5200af3-afd1-4022-86c0-b6f50d47084e)
+![categories enter](https://github.com/user-attachments/assets/9cd6ca5b-22d2-46f8-a0e3-696993c85810)
+
+
 
 ### Technologies Used
 - **Backend:** Django, Django Channels, PostgreSQL, Redis.
@@ -142,8 +146,6 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 -  **Storage:**  AWS S3
 - **Others:** Django Environ, Whitenoise, WebSockets.
 
-
-![Example Ecommerce Website](https://github.com/user-attachments/assets/283f5852-abf9-4bcc-a568-e17fa05ce718)
 
 ## Live Demo
 
