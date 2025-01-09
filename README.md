@@ -135,7 +135,7 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 - Product listing with category filters and search functionality.
 - Product detail pages with review options for purchased products.
 <img src="https://github.com/user-attachments/assets/d5200af3-afd1-4022-86c0-b6f50d47084e" alt="Contact" width="400">
-<img src="(https://github.com/user-attachments/assets/9cd6ca5b-22d2-46f8-a0e3-696993c85810" alt="Contact entert" width="400">
+<img src="https://github.com/user-attachments/assets/9cd6ca5b-22d2-46f8-a0e3-696993c85810" alt="Contact entert" width="400">
 
 
 ### Technologies Used
