@@ -8,6 +8,7 @@ This project demonstrates a modular and maintainable structure, complete with ro
 EcommerceWebsite serves as a fully functional online store, designed with scalability, clean code principles, and separation of concerns in mind. The platform features user account management, admin controls, real-time chat, and seamless order and payment workflows.
 
 <img src="https://github.com/user-attachments/assets/9cdd1d9a-25c0-47eb-ae4c-827fe24294a8" alt="Home " >
+
 # Why This Project Stands Out
 **Simplified Clean Architecture**
 
