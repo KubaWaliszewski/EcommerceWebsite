@@ -54,7 +54,7 @@ The project follows a simplified Clean Architecture pattern adapted to the Djang
 **Interface**
  + Views and forms serve as controllers.
  + User-facing interaction logic resides here.
- + API endpoints (if any) are defined in views.
+
 
 **Infrastructure**
  + ORM models handle database interactions.
@@ -82,7 +82,7 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 - User authentication: login, registration, and email verification.
 - Password reset functionality.
 - User groups with role-specific permissions (Client, Agent, Manager).
-<img src="https://github.com/user-attachments/assets/6b1d0f02-71d4-4610-b7e0-b6907e6060bc" alt="Account Management" width="400">
+<img src="https://github.com/user-attachments/assets/abf43e6d-58f7-4a8d-aa50-1d43f521c859" alt="Account Management" width="400">
 
 ### 2. Admin Panel
 - Custom admin panel for managing products, categories, users, and orders.
@@ -90,6 +90,12 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 - Order status management with tracking of payment status.
 - Live chat management with customers
 - Pagination, search, and filtering for effective data management.
+<img src="https://github.com/user-attachments/assets/f5fcd681-038e-4aa8-816d-8df9f8969a50" alt="Admin Dashboard" width="400">
+<img src="https://github.com/user-attachments/assets/4cadb713-ede1-4b42-8f4b-6a972957fb21" alt="Admin Management" width="400">
+<img src="https://github.com/user-attachments/assets/4d4b7ae7-7cf6-4f42-8ea9-8bb6fc8869b0" alt="Admin Management" width="400">
+<img src="https://github.com/user-attachments/assets/ad953ffc-9c35-4571-9007-478b3ca64416" alt="Admin Management" width="400">
+
+
 
 ### 3. Shopping Cart
 - Add/remove products to/from the cart and update quantities.
