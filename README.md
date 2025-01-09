@@ -113,11 +113,19 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 ### 5. Client Area
 - User profile management: update addresses, view order history, and manage account.
 - Checkout process with address autofill from saved addresses.
+<img src="https://github.com/user-attachments/assets/41bfbab7-0f17-4c01-9ce9-9060975a3fcb" alt="account profile" width="400">
+<img src="https://github.com/user-attachments/assets/f1b3fd51-df99-43d2-bbca-3b11dec73080" alt="account address" width="400">
+<img src="https://github.com/user-attachments/assets/421cb908-18bd-4ca8-ab8f-c37a0674183c" alt="account orders" width="400">
+<img src="https://github.com/user-attachments/assets/f0f6aed4-7609-450a-b4dd-58dde9aa005f" alt="account change password" width="400">
+
 
 ### 6. Core
 - Basic pages: Home, Contact, etc.
 - Custom decorators for role-based access control.
 - Site configuration to enable or disable customer chat
+<img src="https://github.com/user-attachments/assets/9cdd1d9a-25c0-47eb-ae4c-827fe24294a8" alt="Home " width="400">
+<img src="https://github.com/user-attachments/assets/47c05bbf-1953-44c7-8e29-389ee0fec947" alt="Contact" width="400">
+
 
 ### 7. Orders and Payments
 - Order management with order status and tracking.
