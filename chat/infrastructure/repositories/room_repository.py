@@ -33,9 +33,16 @@ class RoomRepository:
         except ORMRoom.DoesNotExist:
             return None
 
-    def save(self, room):
+    def _save_room(self, room):
         orm_room = RoomMapper.to_orm(room)
         orm_room.save()
+
+    def save(self, room):
+        self._save_room(room)
+
+    @sync_to_async
+    def save_async(self, room):
+        self._save_room(room)
 
         
     def delete(self, room):

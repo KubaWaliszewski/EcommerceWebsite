@@ -52,5 +52,6 @@ class DisconnectFromRoomUseCase:
         room = await self.room_repository.get_room(room_name)
         if user.is_staff:
             return
+        
         room.status = Room.CLOSED
-        await self.room_repository.save(room)
+        await self.room_repository.save_async(room)
