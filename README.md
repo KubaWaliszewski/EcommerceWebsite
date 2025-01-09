@@ -94,12 +94,13 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 <img src="https://github.com/user-attachments/assets/4cadb713-ede1-4b42-8f4b-6a972957fb21" alt="Admin Management" width="400">
 <img src="https://github.com/user-attachments/assets/4d4b7ae7-7cf6-4f42-8ea9-8bb6fc8869b0" alt="Admin Management" width="400">
 <img src="https://github.com/user-attachments/assets/ad953ffc-9c35-4571-9007-478b3ca64416" alt="Admin Management" width="400">
-
+<img src="https://github.com/user-attachments/assets/5d2df7e6-5617-4c21-b89b-f77923c97e9a" alt="Admin chat" width="400">
 
 
 ### 3. Shopping Cart
 - Add/remove products to/from the cart and update quantities.
 - Persistent cart data across sessions using context processors.
+<img src="https://github.com/user-attachments/assets/2e957610-34a5-4a08-9386-c39e1a15d17a" alt="Admin chat" width="400">
 
 ### 4. Real-Time Chat
 - WebSocket-based live chat for real-time communication.
