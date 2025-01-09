@@ -19,7 +19,6 @@
                     <a href="{% url 'shop:product_detail' item.product.category.slug item.product.slug %}">
                         <h3 class="font-semibold text-lg">{{ item.product.name }}</h3>
                     </a>
-                    <p class="text-gray-700">{{ item.product.description }}</p>
                     <p class="text-indigo-600">${{ item.product.price }}</p>
                     
                     <div class="flex items-center space-x-2">
