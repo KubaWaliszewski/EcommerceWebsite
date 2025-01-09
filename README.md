@@ -9,7 +9,7 @@ EcommerceWebsite serves as a fully functional online store, designed with scalab
 
 <img src="https://github.com/user-attachments/assets/9cdd1d9a-25c0-47eb-ae4c-827fe24294a8" alt="Home " >
 
-# Why This Project Stands Out
+# 🌐Why This Project Stands Out
 **Simplified Clean Architecture**
 
 + Clear separation into modules (domain, application, interface, infrastructure).
@@ -137,22 +137,31 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 <img src="https://github.com/user-attachments/assets/d5200af3-afd1-4022-86c0-b6f50d47084e" alt="Contact" width="400">
 <img src="https://github.com/user-attachments/assets/9cd6ca5b-22d2-46f8-a0e3-696993c85810" alt="Contact entert" width="400">
 
+###📦 AWS S3 Integration
+The platform uses AWS S3 for efficient and scalable storage of static and media files. A dedicated bucket has been created for the IPN user, ensuring secure and seamless management of uploaded content.
 
-### Technologies Used
+Key Benefits:
+
+Reliability: Highly durable and available storage.
+Cost-Effectiveness: Pay-as-you-go pricing for flexibility.
+Security: Fine-grained access controls for enhanced data protection.
+
+
+### ⚙️Technologies Used
 - **Backend:** Django, Django Channels, PostgreSQL, Redis.
 - **Frontend:** Tailwind CSS, JavaScript.
 -  **Storage:**  AWS S3
 - **Others:** Django Environ, Whitenoise, WebSockets.
 
 
-## Live Demo
+## 🌍Live Demo
 
 The project is hosted on Render and can be accessed at the following link: [Live Demo](https://ecommercewebsite-zcj7.onrender.com).
 
 *Please note:* The website might take a few moments to load initially, as it is hosted on Render’s free tier, which requires the server to "wake up" from an idle state.
 
 
-## Getting Started
+## 🚀Getting Started
 
 ### Prerequisites
 - Python, Node.js, PostgreSQL, Redis.
