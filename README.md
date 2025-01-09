@@ -7,7 +7,6 @@ This project demonstrates a modular and maintainable structure, complete with ro
 # 🚀About the Project
 EcommerceWebsite serves as a fully functional online store, designed with scalability, clean code principles, and separation of concerns in mind. The platform features user account management, admin controls, real-time chat, and seamless order and payment workflows.
 
-![Ecommerce Website](https://github.com/user-attachments/assets/9fd1dee8-650d-43d8-b559-2499a2dc7dbb)
 <img src="https://github.com/user-attachments/assets/9cdd1d9a-25c0-47eb-ae4c-827fe24294a8" alt="Home " >
 # Why This Project Stands Out
 **Simplified Clean Architecture**
@@ -134,10 +133,8 @@ Even though the project follows Django's MVT structure, the principles of Clean 
 ### 8. Shop
 - Product listing with category filters and search functionality.
 - Product detail pages with review options for purchased products.
-
-![categories](https://github.com/user-attachments/assets/d5200af3-afd1-4022-86c0-b6f50d47084e)
-![categories enter](https://github.com/user-attachments/assets/9cd6ca5b-22d2-46f8-a0e3-696993c85810)
-
+<img src="https://github.com/user-attachments/assets/d5200af3-afd1-4022-86c0-b6f50d47084e" alt="Contact" width="400">
+<img src="(https://github.com/user-attachments/assets/9cd6ca5b-22d2-46f8-a0e3-696993c85810" alt="Contact" width="400">
 
 
 ### Technologies Used
